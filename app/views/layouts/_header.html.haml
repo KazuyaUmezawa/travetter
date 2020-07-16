@@ -10,12 +10,14 @@
         = link_to "HOME", root_path, class: "nav_button"
       - if user_signed_in?
         %li.nav-bar__nav__topic
-          = link_to "SCHEDULE", root_path, class: "nav_button"
+          = link_to "SCHEDULE", "#", class: "nav_button"
         %li.nav-bar__nav__topic
-          = link_to "MYPAGE", root_path, class: "nav_button"
+          = link_to "MYPAGE", "#", class: "nav_button"
+        %li.nav-bar__nav__topic
+          = link_to "LOGOUT", sign_out_path, class: "nav_button"
       - else
         %li.nav-bar__nav__topic
-          = link_to "LOGIN", root_path, class: "nav_button"
+          = link_to "LOGIN", sign_in_path, class: "nav_button"
         %li.nav-bar__nav__topic
-          = link_to "SIGN UP", root_path, class: "nav_button"
+          = link_to "SIGN UP", new_user_registration_path, class: "nav_button"
         
