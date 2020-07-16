@@ -10,5 +10,5 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
 
   #必須項目(空欄禁止)
-  validates :nickname, presence: true
+  validates :nickname, :password_confirmation, presence: true
 end
