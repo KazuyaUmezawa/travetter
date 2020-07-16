@@ -8,30 +8,12 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    %nav.navbar.navbar-expand-lg.navbar-dark.bg-primary
-      %a.navbar-brand{:href => root_path} travetter
-      %button.navbar-toggler{"aria-controls" => "navbarNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarNav", "data-toggle" => "collapse", :type => "button"}
-        %span.navbar-toggler-icon
-      #navbarNav.collapse.navbar-collapse
-        %ul.navbar-nav 
-          %li.nav-item
-            %a.nav-link{:href => "#"}
-              Schedule
-              %span.sr-only (current)
-          %li.nav-item
-            %a.nav-link{:href => "#"} Proflie
-          %li.nav-item
-            %a.nav-link{:href => new_user_registration_path} 新規会員登録
-          %li.nav-item
-            %a.nav-link{:href => sign_in_path} ログイン
-      %form.form-inline.my-2.my-lg-0
-        %input.form-control.mr-sm-2{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
-        %button.btn.btn-info.my-2.my-sm-0{:type => "submit"} Search
-        //flashメッセージ
-        - if flash[:notice]
-          .alert.alert-info
-            = flash[:notice]
-        - if flash[:alert]
-          .alert.alert-danger
-            = flash[:alert]
+    = render 'layouts/header'
+    -# - if flash[:notice]
+    -#   .alert.alert-info
+    -#     = flash[:notice]
+    -# - if flash[:alert]
+    -#   .alert.alert-danger
+    -#     = flash[:alert]
     = yield
+    = render 'layouts/footer'
