@@ -27,4 +27,11 @@
       %form.form-inline.my-2.my-lg-0
         %input.form-control.mr-sm-2{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
         %button.btn.btn-info.my-2.my-sm-0{:type => "submit"} Search
+        //flashメッセージ
+        - if flash[:notice]
+          .alert.alert-info
+            = flash[:notice]
+        - if flash[:alert]
+          .alert.alert-danger
+            = flash[:alert]
     = yield
