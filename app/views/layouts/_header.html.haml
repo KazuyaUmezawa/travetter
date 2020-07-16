@@ -8,11 +8,14 @@
     %ul.nav-bar__nav
       %li.nav-bar__nav__topic
         = link_to "HOME", root_path, class: "nav_button"
-      %li.nav-bar__nav__topic
-        = link_to "LOGIN", root_path, class: "nav_button"
-      %li.nav-bar__nav__topic
-        = link_to "SIGN UP", root_path, class: "nav_button"
-      %li.nav-bar__nav__topic
-        = link_to "SCHEDULE", root_path, class: "nav_button"
-      %li.nav-bar__nav__topic
-        = link_to "MYPAGE", root_path, class: "nav_button"
+      - if user_signed_in?
+        %li.nav-bar__nav__topic
+          = link_to "SCHEDULE", root_path, class: "nav_button"
+        %li.nav-bar__nav__topic
+          = link_to "MYPAGE", root_path, class: "nav_button"
+      - else
+        %li.nav-bar__nav__topic
+          = link_to "LOGIN", root_path, class: "nav_button"
+        %li.nav-bar__nav__topic
+          = link_to "SIGN UP", root_path, class: "nav_button"
+        

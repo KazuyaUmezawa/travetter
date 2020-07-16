@@ -1,7 +1,7 @@
 .wrapper {
 background-color: black;
 color:white;
-padding: 10px 50px 10px;
+padding: 0px 50px 0px;
 display: flex;
 justify-content: space-between; 
   .title {
@@ -25,7 +25,7 @@ justify-content: space-between;
   .nav-bar {
     font-size: 20px;
     line-height: 20px;
-    width: 48%;
+    width: 30%;
     &__nav {
       display: flex;
       align-content: center;
