@@ -1,2 +1,18 @@
-.header
-hedda-
+.wrapper
+  .title
+    .title__main
+      travetter
+    .title__sub
+      \- make your trip better -
+  .nav-bar
+    %ul.nav-bar__nav
+      %li.nav-bar__nav__topic
+        = link_to "HOME", root_path, class: "nav_button"
+      %li.nav-bar__nav__topic
+        = link_to "LOGIN", root_path, class: "nav_button"
+      %li.nav-bar__nav__topic
+        = link_to "SIGN UP", root_path, class: "nav_button"
+      %li.nav-bar__nav__topic
+        = link_to "SCHEDULE", root_path, class: "nav_button"
+      %li.nav-bar__nav__topic
+        = link_to "MYPAGE", root_path, class: "nav_button"
